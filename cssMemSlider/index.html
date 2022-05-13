@@ -4,9 +4,59 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <title>CSS Mem Slider</title>
 </head>
 <body>
+  <main class="main">
+    <h1 class="main__title"><b>CSS</b> <span>M</span>em <span>S</span>lider</h1>
+    <input class="hidden" type="radio" name="point" id="slide1" checked>
+    <input class="hidden" type="radio" name="point" id="slide2">
+    <input class="hidden" type="radio" name="point" id="slide3">
+    <input class="hidden" type="radio" name="point" id="slide4">
+    <div class="slider">
+      <div class="slider__wrapper">
+        <div class="slider__elem slide1"><img class="slider__img" src="./assets/img/img1.jpg" alt="img1"></div>
+        <div class="slider__elem slide2"><img class="slider__img" src="./assets/img/img2.jpg" alt="img2"></div>
+        <div class="slider__elem slide3"><img class="slider__img" src="./assets/img/img3.jpg" alt="img3"></div>
+        <div class="slider__elem slide4"><img class="slider__img" src="./assets/img/img4.jpg" alt="img4"></div>
+      </div>
+    </div>
   
+    <div class="controls">
+      <label class="controls__label" for="slide1">
+        <span class="controls__box">
+          <span class="controls__elem"></span>
+        </span>
+      </label>
+
+      <label class="controls__label" for="slide2">
+        <span class="controls__box">
+          <span class="controls__elem"></span>
+        </span>
+      </label>
+
+      <label class="controls__label" for="slide3">
+        <span class="controls__box">
+          <span class="controls__elem"></span>
+        </span>
+      </label>
+
+      <label class="controls__label" for="slide4">
+        <span class="controls__box">
+          <span class="controls__elem"></span>
+        </span>
+      </label>
+    </div>
+
+    <div class="text-slider">
+      <div class="text-slider__wrapper">
+        <p class="text-slider__elem text-slide1">То, <span>что вы увидите</span>, называется мемы</p>
+        <p class="text-slider__elem text-slide2">Good <span>luck!</span></p>
+        <p class="text-slider__elem text-slide3">Про<span>(крастинация)</span>граммирование</p>
+        <p class="text-slider__elem text-slide4"><span>Boom!</span> You're awesome</p>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
