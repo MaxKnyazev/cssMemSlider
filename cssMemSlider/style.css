@@ -176,3 +176,38 @@ body {
 #slide4:checked ~ .text-slider > .text-slider__wrapper {
   margin-left: -300%;
 }
+
+@media (max-width: 1279px) {
+  .main {
+    width: 63%;
+  }
+}
+
+@media (max-width: 1023px) {
+  .main {
+    width: 75%;
+  }
+
+  .text-slider {
+    margin-top: 0;
+    width: 100%;
+  }
+
+  .controls {
+    justify-content: center;
+  }
+
+  .controls__label {
+    margin: 1vw;
+  }
+}
+
+@media (max-width: 767px) {
+  .main {
+    width: 90%;
+  }
+
+  .text-slider__elem {
+    font-size: calc(0.5rem + 2vw);
+  }
+}
