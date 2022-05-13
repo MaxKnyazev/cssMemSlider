@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  transition: all 200ms linear;
+}
+
+.hidden {
+  display: none;
+}
+
+body {
+  background-color: rgb(13 13 13);
+}
+
+.main {
+  background-color: rgb(13 13 13);
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.main__title {
+  color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  text-align: center;
+  font-size: calc(1rem + 3vw);
+  font-weight: 400;
+}
+
+.main__title span {
+  color: rgb(0, 140, 255);
+}
+
+.main__title b {
+  color: rgb(0, 64, 116);
+}
+
+.slider {
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider__wrapper {
+  width: 400%;
+  height: 100%;
+  display: flex;
+}
+
+.slider__elem {
+  height: inherit;
+  width: 100%;
+  height: auto;
+}
+
+.slider__img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+.controls {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.controls__label {
+  width: calc(2vh + 1vw);
+  height: 3rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.controls__label:hover .controls__box {
+  border-color: rgb(133, 133, 133);
+}
+.controls__label:hover .controls__elem {
+  background-color: rgb(133, 133, 133);
+}
+
+.controls__box {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 0.2vw solid rgb(59, 59, 59);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.controls__elem {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: rgb(59, 59, 59);
+}
+
+#slide1:checked ~ .slider > .slider__wrapper {
+  margin-left: 0%;
+}
+
+#slide2:checked ~ .slider > .slider__wrapper {
+  margin-left: -100%;
+}
+
+#slide3:checked ~ .slider > .slider__wrapper {
+  margin-left: -200%;
+}
+
+#slide4:checked ~ .slider > .slider__wrapper {
+  margin-left: -300%;
+}
+
+#slide1:checked ~ .controls label:nth-of-type(1) .controls__elem,
+#slide2:checked ~ .controls label:nth-of-type(2) .controls__elem,
+#slide3:checked ~ .controls label:nth-of-type(3) .controls__elem,
+#slide4:checked ~ .controls label:nth-of-type(4) .controls__elem {
+  background-color: rgb(0, 140, 255);
+}
+
+#slide1:checked ~ .controls label:nth-of-type(1) .controls__box,
+#slide2:checked ~ .controls label:nth-of-type(2) .controls__box,
+#slide3:checked ~ .controls label:nth-of-type(3) .controls__box,
+#slide4:checked ~ .controls label:nth-of-type(4) .controls__box {
+  border-color: rgb(0, 64, 116);
+}
+
+.text-slider {
+  height: auto;
+  width: 75%;
+  overflow: hidden;
+  margin-top: -4rem;
+}
+
+.text-slider__wrapper {
+  width: 400%;
+  height: 100%;
+  display: flex;
+}
+
+.text-slider__elem {
+  height: inherit;
+  color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: calc(0.5rem + 1vw);
+  width: 100%;
+  height: auto;
+}
+
+.text-slider__elem span {
+  color: rgb(0, 140, 255);
+}
+
+#slide1:checked ~ .text-slider > .text-slider__wrapper {
+  margin-left: 0%;
+}
+
+#slide2:checked ~ .text-slider > .text-slider__wrapper {
+  margin-left: -100%;
+}
+
+#slide3:checked ~ .text-slider > .text-slider__wrapper {
+  margin-left: -200%;
+}
+
+#slide4:checked ~ .text-slider > .text-slider__wrapper {
+  margin-left: -300%;
+}
